@@ -1,0 +1,19 @@
+[workspace]
+authors = ["sapetnioc <sapetnioc@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "jekyll"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[dependencies]
+ruby = ">=3.3.3,<4"
+gcc = "*"
+gxx = "*"
+gfortran = "*"
+pybtex = "*"
+
+[activation]
+scripts = ["jekyll_activation.sh"]
+
+[tasks]
+serve = {cmd = "jekyll serve --livereload",cwd = "site"}
