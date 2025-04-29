@@ -16,4 +16,4 @@ pybtex = "*"
 scripts = ["jekyll_activation.sh"]
 
 [tasks]
-serve = {cmd = "jekyll serve --livereload",cwd = "site"}
+serve = {cmd = "jekyll serve --livereload", cwd = "."}
