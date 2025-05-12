@@ -4,7 +4,7 @@ title: "SPIN"
 ---
 
 
-# <img src="{{ "/assets/images/spin_logo.svg" | absolute_url }} alt="spin logo" style="width:3em;"/> SPIN track: Track Software Projects for Informatics and Neuroimaging
+# <img src="{{ "/assets/images/spin_logo.svg" | absolute_url }}" alt="spin logo" style="width:3em;"/> SPIN track: Track Software Projects for Informatics and Neuroimaging
 
 
 SPIN track is a research driven initiative designed to streamline the management, integration, and dissemination of important neuroimaging tools within CATI and GAIA. As neuroimaging research evolves, the complexity and diversity of analysis pipelines grow. In order to keep the CATI-GAIA IT ecosystem sustainable, SPIN track offers tools and recommendations to support the full lifecycle of neuroimaging software, from development and testing to deployment and reproducibility. It provides a centralized documentation and discussion platform that bridges locally developed applications with tools sourced from leading research groups worldwide.
@@ -39,17 +39,17 @@ Apart from minor changes, any decision taken at a regular or informal meeting mu
 # Forges
 {% assign forges = site.pages | where:"category","forge" | sort:"order" %}
 {% for page in forges %}
-- [ {{ page.title }} ]( {{page.url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
+- [ {{ page.title }} ]( {{page.url | absolute_url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
 {% endfor %}
 
 # Software
 {% assign softwares = site.pages | where:"category","software" %}
 {% for page in softwares %}
-- [ {{ page.title }} ]( {{page.url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
+- [ {{ page.title }} ]( {{page.url | absolute_url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
 {% endfor %}
 
 # Repos
 {% assign repos = site.pages | where:"category","repo" | sort:"order" %}
 {% for page in repos %}
-- [ {{ page.title }} ]( {{page.url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
+- [ {{ page.title }} ]( {{page.url | absolute_url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
 {% endfor %}
