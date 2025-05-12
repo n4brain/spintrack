@@ -1,6 +1,6 @@
-url: "https://sapetnioc.github.io/spin" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+url: "https://n4brain.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/spintrack" # the subpath of your site, e.g. /blog
+title: "SPIN track" # the name of your site, e.g. ACME Corp.
 include:
 - software
 - forge
