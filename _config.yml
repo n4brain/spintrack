@@ -5,3 +5,14 @@ include:
 - software
 - forge
 - repo
+defaults:
+  - 
+    scope:
+      path: "index.md" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  - 
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "project"

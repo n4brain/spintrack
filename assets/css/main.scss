@@ -1,14 +1,30 @@
 ---
 ---
 
-@import "base";
+
+table.cartouche {
+  // Tes styles ici
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+
+  tr:nth-child(even) {
+    background-color: #dbdbdb;
+  }
+
+  th {
+    font-weight: bold;
+    padding: 8px;
+    text-align: left;
+  }
+}
 
 
 .tag {
     color:white;
     padding: 0.2em;
     background-color:gray;
-    font-size: 0.5em;
+    font-size: 0.8em;
     border-radius: 0.3em;
     vertical-align: super;
   }

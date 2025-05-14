@@ -1,0 +1,6 @@
+<table class="cartouche">
+    <tr><th>Name</th><td>{{page.title}}</td></tr>
+    <tr><th>Category</th><td>{{page.category}}</td></tr>
+    <tr><th>Description</th><td>{{page.description}}</td></tr>
+    <tr><th>Tags</th><td>{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}</td></tr>
+</table>

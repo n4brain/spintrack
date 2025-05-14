@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "SPIN"
+title: "SPIN track"
 ---
 
 <img src="{{ "/assets/images/spintrack-text.svg" | absolute_url }}" alt="spin logo" style="width:15em;"/> 
@@ -40,17 +40,17 @@ Apart from minor changes, any decision taken at a regular or informal meeting mu
 # Forges
 {% assign forges = site.pages | where:"category","forge" | sort:"order" %}
 {% for page in forges %}
-- [ {{ page.title }} ]( {{page.url | absolute_url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
+- [ {{ page.title }} ]( {% link {{page.path}} %} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
 {% endfor %}
 
 # Software
 {% assign softwares = site.pages | where:"category","software" %}
 {% for page in softwares %}
-- [ {{ page.title }} ]( {{page.url | absolute_url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
+- [ {{ page.title }} ]( {% link {{page.path}} %} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}{% if page.caramba %}<bold>{{page.caramba}}</bold>{% endif %}
 {% endfor %}
 
 # Repos
 {% assign repos = site.pages | where:"category","repo" | sort:"order" %}
 {% for page in repos %}
-- [ {{ page.title }} ]( {{page.url | absolute_url}} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
+- [ {{ page.title }} ]( {% link {{page.path}} %} ): {{page.description | markdownize}}{% for tag in page.tags %} <span class="tag {{tag}}">{{tag}}</span>{% endfor %}
 {% endfor %}
